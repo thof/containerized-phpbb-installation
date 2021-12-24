@@ -1,0 +1,10 @@
+[Unit]
+Description=Renew certs for web-site
+Requires=renew-cert.service
+
+[Timer]
+Unit=renew-cert.service
+OnCalendar=Mon
+
+[Install]
+WantedBy=timers.target

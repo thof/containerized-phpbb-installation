@@ -1,0 +1,11 @@
+[Unit]
+Description=Renew certificates for web-site
+Wants=renew-cert.timer
+
+[Service]
+Type=oneshot
+WorkingDirectory=/root/forum
+ExecStart=/root/forum/renew_cert.sh
+
+[Install]
+WantedBy=multi-user.target
